@@ -62,9 +62,12 @@ def main():
   ##########################################
   input_shape, preprocessing_fn = get_model_config(MODEL, sets['train']['files'][0], MAX_WAVE_SIZE)
   model = get_model(MODEL, input_shape, len(encoder.categories_[0]))
+  #print("Input shape:", input_shape)
   model.summary()
   loss_fn = tf.keras.losses.CategoricalCrossentropy(from_logits=True)
   optimizer = tf.keras.optimizers.RMSprop(learning_rate=LEARNING_RATE)
+
+  #return
 
   ##########################################
   # train and then evaluate the model with the test set
@@ -74,7 +77,9 @@ def main():
   checkpoint_name = f"results/{EXPERIMENT_NAME}_model.ckpt"
   train_history = train(model, loss_fn, optimizer, sets['train'], sets['val'], 
     preprocessing_fn, NUM_EPOCHS, BATCH_SIZE, checkpoint_name, BALANCE_BATCHES)
-  model = tf.keras.models.load_model(checkpoint_name)
+
+  model = tf.keras.models.load_model(checkpoint_name) 
+
   test_history = evaluate_model(model, preprocessing_fn, sets['test'], BATCH_SIZE)
   
   ##########################################
