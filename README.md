@@ -1,4 +1,4 @@
-# 216537-Classifica-o-de-Sotaques-Brasileiros-usando-Redes-Neurais-Profundas
+# Classificacao-de-Sotaques-Brasileiros-usando-Redes-Neurais-Profundas
 Classificação de Sotaques Brasileiros usando Redes Neurais Profundas
 
 Estes arquivos consideram o acesso a base de dados BRAccent para os seus arquivos mono.
