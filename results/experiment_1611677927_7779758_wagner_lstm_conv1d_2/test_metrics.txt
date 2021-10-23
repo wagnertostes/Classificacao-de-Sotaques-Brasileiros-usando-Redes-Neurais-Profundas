@@ -1,0 +1,23 @@
+Classification Report:
+              precision    recall  f1-score   support
+
+      Baiano       0.88      0.79      0.84        29
+     Carioca       0.72      0.93      0.81        14
+  Fluminense       0.71      0.75      0.73        16
+     Mineiro       0.87      0.91      0.89        22
+  Nordestino       0.96      0.90      0.93        60
+    Nortista       1.00      0.50      0.67         4
+     Sulista       0.91      0.93      0.92       119
+
+    accuracy                           0.89       264
+   macro avg       0.87      0.82      0.83       264
+weighted avg       0.90      0.89      0.89       264
+
+Confusion Matrix:
+23	0	0	3	1	0	2	
+0	13	0	0	0	0	1	
+0	0	12	0	0	0	4	
+2	0	0	20	0	0	0	
+0	2	0	0	54	0	4	
+0	2	0	0	0	2	0	
+1	1	5	0	1	0	111	
