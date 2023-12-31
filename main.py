@@ -11,15 +11,15 @@ from bac.traineval import *
 from bac.dataset import *
 
 
-# ---------------------------------------------------------
-# Only required when running in Ifes' computers.
-from tensorflow.compat.v1 import ConfigProto
-from tensorflow.compat.v1 import InteractiveSession
-
-config = ConfigProto()
-config.gpu_options.allow_growth = True
-session = InteractiveSession(config=config)
-# --------------------------------------------------------
+## ---------------------------------------------------------
+## Only required when running in Ifes' computers.
+#from tensorflow.compat.v1 import ConfigProto
+#from tensorflow.compat.v1 import InteractiveSession
+#
+#config = ConfigProto()
+#config.gpu_options.allow_growth = True
+#session = InteractiveSession(config=config)
+## --------------------------------------------------------
 
 
 def configure_environment(seed):
